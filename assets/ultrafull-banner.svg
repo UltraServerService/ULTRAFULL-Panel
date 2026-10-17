@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+<title id="title">ULTRAFULL</title>
+<desc id="desc">Tunnel Control Center — Ultra, Paqet and Backhaul</desc>
+<rect x="1" y="1" width="1198" height="278" rx="20" fill="#10151f" stroke="#29364a" stroke-width="2"/>
+<path d="M48 80V48H80M1120 48H1152V80M48 200V232H80M1120 232H1152V200" fill="none" stroke="#3c78aa" stroke-width="2"/>
+<text x="600" y="57" text-anchor="middle" fill="#a2afc4" font-family="Arial,sans-serif" font-size="16" letter-spacing="5">TUNNEL CONTROL CENTER</text>
+<text x="607" y="175" text-anchor="middle" fill="none" stroke="#377eae" stroke-width="1" font-family="monospace" font-size="112" font-weight="900" letter-spacing="5">ULTRAFULL</text>
+<text x="600" y="168" text-anchor="middle" fill="#62b2fb" font-family="monospace" font-size="112" font-weight="900" letter-spacing="5">ULTRAFULL</text>
+<path d="M400 207H800" stroke="#29364a" stroke-width="1"/>
+<text x="600" y="242" text-anchor="middle" fill="#b8c5d9" font-family="Arial,sans-serif" font-size="18" letter-spacing="3">ULTRA · PAQET · BACKHAUL</text>
+</svg>
+
