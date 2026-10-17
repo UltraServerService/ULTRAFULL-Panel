@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 0.2.1</strong> · Linux amd64 · systemd
+  <strong>Version 0.2.2</strong> · Linux amd64 · systemd
 </p>
 
 <p align="center">
@@ -14,6 +14,8 @@
 ## English
 
 ULTRAFULL brings **Ultra, Paqet and Backhaul** into one terminal panel. Install tunnels, manage customer ports, select routes and check connection status from the same interface.
+
+Coordinated TCP / ICMP engine selection is available for UltraMax. IP changes preserve the selected engine.
 
 | Component | What it does |
 | --- | --- |
@@ -81,7 +83,6 @@ ULTRAFULL پنلی برای مدیریت **Ultra، Paqet و Backhaul** است. �
 | Component licenses and notices | [Third-party notices](docs/THIRD_PARTY.md) |
 
 The commercial installer is separate from the classic edition. Component licenses, including those for open-source software and Backhaul Premium, still apply.
-
 
 This repository contains the public documentation, panel preview and installation bootstrap. Runtime packages are supplied by the license service after validation.
 

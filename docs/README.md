@@ -54,6 +54,8 @@ with the existing rollback/restart controls. Removing a pair stops its uptime
 notifications; historical incidents remain available. Uptime tests use real
 HTTPS requests, rather than declaring a tunnel healthy from service state alone.
 
+UltraMax supports explicit **TCP** and **ICMP** engine selection in the panel and control bot. The choice is coordinated across both servers, preserves keys and configured limits, and survives an IP change. A mode or source-IP change restarts the affected tunnel services, checks complete download and upload transfers, and restores the previous configuration if verification fails. Update both hosts before using these controls.
+
 Panel labels are English. The first authenticated connection of each installed
 tunnel shows the full-screen ULTRAFULL animation once. Reopening a panel or
 changing ports does not replay the animation. Tunnel traffic encryption and
@@ -135,6 +137,12 @@ ULTRAFULL برای نصب و مدیریت Ultra، Paqet و Backhaul طراحی �
 با حذف جفت از ultrasource، هشدارهای جدید اپتایم آن متوقف می‌شوند و تاریخچهٔ قطعی‌های قبلی حفظ می‌شود. پایش مشتری با درخواست واقعی HTTPS انجام می‌شود؛ فعال بودن سرویس به‌تنهایی نشان‌دهندهٔ اتصال سالم نیست.
 
 پس از اولین اتصال تأییدشدهٔ هر تونل، نشان ULTRAFULL یک بار نمایش داده می‌شود. باز کردن مجدد پنل یا تغییر پورت، این نمایش را تکرار نمی‌کند. زبان پنل انگلیسی است.
+
+### انتخاب حالت UltraMax
+
+در پنل و ربات کنترل، برای UltraMax یکی از دو حالت **TCP** یا **ICMP** را انتخاب کنید. تغییر روی هر دو سرور هماهنگ اعمال می‌شود. انتخاب حالت با تغییر آی‌پی عوض نمی‌شود و کلیدها و سقف‌های تنظیم‌شده حفظ می‌شوند.
+
+پس از تغییر حالت یا آی‌پی، سرویس‌های مربوط دوباره راه‌اندازی می‌شوند و دانلود و آپلود واقعی بررسی می‌شود. اگر بررسی موفق نباشد، تنظیم قبلی برمی‌گردد. پیش از استفاده، هر دو سرور را به‌روز کنید.
 
 ### به‌روزرسانی و تمدید
 

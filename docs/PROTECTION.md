@@ -1,6 +1,6 @@
-# Protected runtime and updates — 0.2.1
+# Protected runtime and updates — 0.2.2
 
-ULTRAFULL uses AES-256-GCM authenticated envelopes around the five Ultra
+ULTRAFULL uses AES-256-GCM authenticated envelopes around the registered Ultra
 executables. Each new build uses independent random keys for each executable.
 Decryption material is no longer passed through Go linker flags, which are
 recorded in executable build information. Splitting generated key material is
@@ -19,8 +19,10 @@ These controls reduce accidental exposure and casual extraction. They do not
 prevent extraction by an administrator controlling the operating system. Memory
 may also be swapped by the OS; no claim of hardware-backed secrecy is made.
 
-The underlying five executable payloads are byte-for-byte identical to 0.2.0.
-Traffic encryption, upload/download limits and transport behavior are unchanged.
+The five existing core payloads are unchanged. Two tested TCP adapter images
+are added as separately protected assets. TCP and ICMP can be selected for each
+registered pair. Licensing does not reduce traffic encryption or configured
+upload/download limits.
 Existing active tunnels are not automatically restarted by a panel update.
 The updated runtime package is used when installing the Ultra runtime.
 
