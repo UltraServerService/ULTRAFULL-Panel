@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 0.2.0</strong> · Linux amd64 · systemd
+  <strong>Version 0.2.1</strong> · Linux amd64 · systemd
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@ curl -fL --proto '=https' --tlsv1.2 \
 sudo bash install-commercial.sh
 ```
 
-Select the server role when prompted. A license covers **one Iran IPv4**, with **no limit on foreign servers** connected to that entitlement. You can install the foreign side first.
+The installer opens the ULTRAFULL panel. Choose **1 - Iran** or **2 - Foreign**. Iran activation asks only for the license and verifies its assigned server IP. A license covers **one Iran IPv4**, with **no limit on foreign servers** connected to that entitlement. You can install the foreign side first.
 
 After installation, open the panel with `sudo ultrafull`. Start with **Install bots** on Iran, then follow the [installation guide](docs/README.md#english) for proxy setup, SSH registration and adding a server pair.
 
@@ -84,3 +84,5 @@ The commercial installer is separate from the classic edition. Component license
 
 
 This repository contains the public documentation, panel preview and installation bootstrap. Runtime packages are supplied by the license service after validation.
+
+[Protected runtime and update compatibility](docs/PROTECTION.md)

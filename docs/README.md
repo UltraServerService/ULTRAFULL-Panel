@@ -18,8 +18,10 @@ sudo bash install-commercial.sh
 The installer asks for the server role. Outbound HTTPS to the authority on port
 9448 is required. The same command installs Iran and Foreign.
 
-On **Iran**, enter an assigned public IPv4 and its license. On **Foreign**, enter
-the foreign server's assigned public IPv4 and the licensed Iran IPv4. Foreign
+The installer opens the ULTRAFULL panel. Choose **1 — Iran server** or
+**2 — Foreign server**. On **Iran**, enter only the license; its verified IPv4
+must already be assigned to the server. On **Foreign**, the local IPv4 is selected
+automatically or from a numbered list; enter the licensed Iran IPv4. Foreign
 installation can happen first. The authority verifies that the request actually
 comes from the server IPv4 and that the Iran entitlement is active; foreign
 servers have no per-license count limit. Knowing an active Iran IP permits
@@ -92,8 +94,10 @@ ULTRAFULL برای نصب و مدیریت Ultra، Paqet و Backhaul طراحی �
 
 لایسنس به **یک آی‌پی عمومی ایران** اختصاص دارد و تعداد سرورهای خارج محدود نیست:
 
-- در سرور ایران، نقش **Iran**، آی‌پی عمومی همان سرور و لایسنس را وارد کنید.
-- در سرور خارج، نقش **Foreign**، آی‌پی عمومی سرور خارج و آی‌پی ایرانِ دارای لایسنس را وارد کنید.
+- در پنل، گزینهٔ **۱ — Iran server** را انتخاب کرده و فقط لایسنس را وارد کنید. IP از لایسنس خوانده می‌شود و باید روی همان سرور موجود باشد.
+- برای خارج، گزینهٔ **۲ — Foreign server** را انتخاب کنید. IP محلی خودکار یا از فهرست شماره‌دار انتخاب می‌شود؛ سپس IP ایرانِ دارای لایسنس را وارد کنید.
+
+اگر لایسنس معتبر نباشد، پیام راهنما داخل پنل نمایش داده می‌شود. برای دریافت لایسنس معتبر به **@licenseultra_bot** مراجعه کنید.
 
 نصب سرور خارج پیش از ایران نیز امکان‌پذیر است. سرویس مرکزی، اعتبار لایسنس ایران و آی‌پی مبدأ درخواست را بررسی می‌کند. در این مدل، اطلاع از آی‌پی ایرانِ دارای لایسنس برای ثبت سرور خارج کافی است؛ مجوز خارج برای فعال‌سازی سرور ایران قابل استفاده نیست.
 
