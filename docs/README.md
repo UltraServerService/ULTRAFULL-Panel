@@ -20,8 +20,7 @@ The installer asks for the server role. Outbound HTTPS to the authority on port
 
 The installer opens the ULTRAFULL panel. Choose **1 — Iran server** or
 **2 — Foreign server**. On **Iran**, enter only the license; its verified IPv4
-must already be assigned to the server. On **Foreign**, the local IPv4 is selected
-automatically or from a numbered list; enter the licensed Iran IPv4. Foreign
+must already be assigned to the server. On **Foreign**, enter only the licensed Iran IPv4. The local source IPv4 is detected automatically for the connection to the license service. Foreign
 installation can happen first. The authority verifies that the request actually
 comes from the server IPv4 and that the Iran entitlement is active; foreign
 servers have no per-license count limit. Knowing an active Iran IP permits
@@ -95,7 +94,7 @@ ULTRAFULL برای نصب و مدیریت Ultra، Paqet و Backhaul طراحی �
 لایسنس به **یک آی‌پی عمومی ایران** اختصاص دارد و تعداد سرورهای خارج محدود نیست:
 
 - در پنل، گزینهٔ **۱ — Iran server** را انتخاب کرده و فقط لایسنس را وارد کنید. IP از لایسنس خوانده می‌شود و باید روی همان سرور موجود باشد.
-- برای خارج، گزینهٔ **۲ — Foreign server** را انتخاب کنید. IP محلی خودکار یا از فهرست شماره‌دار انتخاب می‌شود؛ سپس IP ایرانِ دارای لایسنس را وارد کنید.
+- برای خارج، گزینهٔ **۲ — Foreign server** را انتخاب کنید. فقط IP ایرانِ دارای لایسنس را وارد کنید. آی‌پی مبدأ این سرور برای ارتباط با سرویس لایسنس به‌صورت خودکار تشخیص داده می‌شود.
 
 اگر لایسنس معتبر نباشد، پیام راهنما داخل پنل نمایش داده می‌شود. برای دریافت لایسنس معتبر به **@licenseultra_bot** مراجعه کنید.
 
