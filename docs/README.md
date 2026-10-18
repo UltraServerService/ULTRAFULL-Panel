@@ -1,8 +1,8 @@
 # ULTRAFULL Commercial
 
-Version 0.2.3 improves CPU resource handling after server upgrades, concurrent-transfer stability, and coordinated UltraMax TCP / ICMP changes. Throughput depends on the selected path and server resources.
+Version 0.2.4 improves parallel TCP transfer handling and keeps transport settings synchronized during IP and mode changes. Updating the panel stages these changes without restarting an active tunnel; coordinated route changes apply them to both servers. Encryption and configured traffic limits are preserved.
 
-نسخهٔ 0.2.3 مدیریت منابع پس از ارتقای سرور، پایداری انتقال‌های هم‌زمان و تغییر هماهنگ حالت TCP / ICMP در UltraMax را بهبود می‌دهد. سرعت نهایی به مسیر شبکه و منابع سرور بستگی دارد.
+نسخهٔ 0.2.4 انتقال‌های هم‌زمان TCP و هماهنگی تنظیمات هنگام تغییر IP یا حالت اتصال را بهبود می‌دهد. آپدیت پنل به‌تنهایی تونل فعال را ری‌استارت نمی‌کند؛ تغییر هماهنگ مسیر، تنظیمات را روی هر دو سرور اعمال می‌کند. رمزنگاری و محدودیت‌های تنظیم‌شدهٔ ترافیک حفظ می‌شوند.
 
 ## English
 
