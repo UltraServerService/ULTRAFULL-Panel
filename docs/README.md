@@ -1,5 +1,9 @@
 # ULTRAFULL Commercial
 
+Version 0.2.3 improves CPU resource handling after server upgrades, concurrent-transfer stability, and coordinated UltraMax TCP / ICMP changes. Throughput depends on the selected path and server resources.
+
+نسخهٔ 0.2.3 مدیریت منابع پس از ارتقای سرور، پایداری انتقال‌های هم‌زمان و تغییر هماهنگ حالت TCP / ICMP در UltraMax را بهبود می‌دهد. سرعت نهایی به مسیر شبکه و منابع سرور بستگی دارد.
+
 ## English
 
 ULTRAFULL manages Ultra, Paqet and Backhaul from one terminal panel. Ultra offers
