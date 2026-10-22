@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 0.2.6</strong> · Linux amd64 · systemd
+  <strong>Version 0.2.7</strong> · Linux amd64 · systemd
 </p>
 
 <p align="center">
@@ -14,6 +14,8 @@
 ## English
 
 ULTRAFULL brings **Ultra, Paqet, Backhaul and Spoof** into one terminal panel. Install tunnels, manage customer ports, select routes and check connection status from the same interface.
+
+Version 0.2.7 fixes raw TCP carrier checksums for Spoof while preserving both spoofed sources, encryption and TUN/IPX/TCP. The owned correction survives service restarts; unrelated traffic is unchanged.
 
 Coordinated TCP / ICMP engine selection is available for UltraMax. IP changes preserve the selected engine.
 

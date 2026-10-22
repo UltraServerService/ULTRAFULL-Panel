@@ -1,0 +1,119 @@
+{
+  "version": "0.2.7",
+  "tested_at": "2026-10-22",
+  "linux_unit_groups": [
+    {
+      "group": "classic",
+      "tests": 347,
+      "ok": true,
+      "skipped": 0
+    },
+    {
+      "group": "commercial",
+      "tests": 47,
+      "ok": true,
+      "skipped": 0
+    }
+  ],
+  "linux_unit_tests_executed": 394,
+  "generic_vendor_retired_fixture_skips": 18,
+  "central_deployment_compatibility": {
+    "tests": 267,
+    "ok": true,
+    "skipped": 0,
+    "evidence_reused_from": "0.2.6; unchanged central implementation, not rerun or counted in current 394"
+  },
+  "isolated_integration": {
+    "fresh_install": true,
+    "update": true,
+    "local_panel_without_external_route": true,
+    "token_and_license_selection_pty": true,
+    "hidden_token_entry": true,
+    "invalid_license_retry": true,
+    "stored_credentials_no_reprompt_unit_tests": true
+  },
+  "live_spoof_transport": {
+    "backhaul": "TUN / IPX / TCP",
+    "matching_outer_spoof_packets_both_directions": true,
+    "real_source_carrier_seen": false,
+    "customer_https_any_success": true,
+    "customer_https_attempts": 5,
+    "customer_https_successes": 4,
+    "customer_https_timeouts": 1,
+    "customer_exit_ip_verified": true,
+    "capture_seconds": 128,
+    "capture_kernel_drops": 0,
+    "heartbeat_timeout_mentions_in_window": 0,
+    "service_pids_unchanged_in_window": true,
+    "intermittent_return_packet_loss_observed": true,
+    "current_identities_encryption_and_customer_ports_preserved": true,
+    "physical_tcp_checksum_after_correction": {
+      "sample_packets": 4,
+      "valid": 4,
+      "zero": 0
+    },
+    "limits": "A successful bounded window does not establish continuous stability; later short download probes were unsuccessful. No throughput result or future outage availability guarantee."
+  },
+  "hypervisor_scope": {
+    "vm_and_mac_pinned": true,
+    "forced_command_key": true,
+    "owned_child_chain_only": true,
+    "reconcile_timer_enabled": true,
+    "python2_syntax_verified": true,
+    "scoped_ssh_round_trip_verified": true
+  },
+  "production_preservation": {
+    "unrelated_tunnel_pids_unchanged": true,
+    "existing_customer_profile_preserved": true,
+    "central_pair_state_preserved": true,
+    "unrelated_bot_and_monitor_pids_unchanged": true,
+    "only_current_spoof_service_intentionally_restarted": true,
+    "unrelated_customer_xui_xray_pids_preserved": true
+  },
+  "component_reuse": {
+    "protected_ultra_from_validated_release": "0.2.4",
+    "protected_ultra_package_sha256": "aab18203bca161caafd762d08b39c9aa576dca56c5d6db66ccd0c7330aefe8d6",
+    "separate_spoof_core_sha256": "6eec5c5624bdafd47ee4f92a0b2e4c6e89719a2cc471d48c97f47d47997c081f"
+  },
+  "limits": [
+    "Isolated installer checks use a systemd control harness; live Spoof services were separately tested under real systemd.",
+    "The checksum correction repairs packet validity; it does not remove upstream packet loss or prove the cause of transient speed changes.",
+    "No new throughput or future blackout availability claim.",
+    "License expiry and background renewal semantics are unchanged.",
+    "Spoof identities must be proven separately per direction; rented ownership is not evidence of upstream source acceptance.",
+    "A reusable private main-registration profile is required once per new owned VM; this is separate from the Iran/foreign tunnel pairing bundle. The main relay supports the verified Virtualizor IP inventory schema; unknown or mismatched inventory fails closed."
+  ],
+  "unchanged_manager_evidence_reused_from": "0.2.5: generic 249 executed passed, 18 retired fixtures skipped; actual central 267 passed",
+  "main_registration": {
+    "tls_fingerprint_pinned": true,
+    "private_enrollment_credential_required": true,
+    "tcp_source_matches_guest_ip": true,
+    "ip_and_mac_match_mother_inventory": true,
+    "automatic_vm_id_lookup": true,
+    "real_guest_registration_and_scoped_relay": true,
+    "existing_firewall_request_idempotent": true,
+    "existing_guest_config_and_tunnel_pids_preserved": true,
+    "mother_admin_key_on_guest": false,
+    "main_key_forced_to_helper_and_main_source_ip": true,
+    "new_vm_identity_read_only_confirmed": true
+  },
+  "checksum_kernel_integration": {
+    "isolated_veth": true,
+    "owned_flow_checksum_valid": true,
+    "addresses_and_payload_preserved": true,
+    "unrelated_sources_and_ports_unchanged": true,
+    "owned_filter_and_clsact_removed": true,
+    "production_interfaces_used": false
+  },
+  "checksum_fix": {
+    "exact_owned_egress_tcp_flow_only": true,
+    "source_destination_ports_unchanged": true,
+    "no_real_source_fallback": true,
+    "restart_and_cleanup_integrated": true,
+    "updater_applies_guard_without_tunnel_restart": true,
+    "new_spoof_heartbeat_seconds": [
+      5,
+      60
+    ]
+  }
+}

@@ -1,8 +1,12 @@
 # ULTRAFULL Commercial
 
-Version 0.2.6 adds Spoof as a fourth independent family (TUN / IPX / TCP), scoped guest firewall and optional per-VM hypervisor setup. Initial installation offers the existing repository token or a license. The owner token is saved root-only after a verified download; license activation remains cached until it expires or is rejected. The installed ultrafull command opens local files without fetching GitHub. Updates and first-time missing package downloads need network access.
+Version 0.2.7 corrects invalid raw TCP carrier checksums using an owned, exact-flow egress action. Spoof identities, real endpoints, encryption and TUN/IPX/TCP remain unchanged. The correction is restored when the Spoof service starts and is removed with that tunnel, preserving unrelated traffic and queue settings. Updating applies it to an already running Spoof service without restarting the tunnel. New Spoof configurations use a 5-second heartbeat and a 60-second timeout.
 
-نسخهٔ 0.2.6 گزینهٔ چهارم اسپوف را با TUN/IPX/TCP اضافه می‌کند. ابتدا ورود با توکن اصلی یا لایسنس انتخاب می‌شود. توکن پس از دریافت تأییدشده، خصوصی برای روت ذخیره می‌شود. بازکردن پنل نصب‌شده به گیت‌هاب وابسته نیست؛ تمدید لایسنس و دریافت آپدیت مسیر جدا دارند.
+نسخهٔ ۰٫۲٫۷ چک‌سام حامل TCP اسپوف را فقط برای جریان همان تونل اصلاح می‌کند؛ مبدأهای اسپوف، مقصدها، رمزنگاری و ساختار TUN/IPX/TCP تغییر نمی‌کنند. اصلاح در استارت بعدی هم برقرار می‌شود و همراه حذف تونل پاک می‌شود. آپدیت، اصلاح چک‌سام را بدون ری‌استارت تونل فعال اعمال می‌کند.
+
+Spoof is a fourth independent family (TUN / IPX / TCP), with scoped guest firewall and optional per-VM hypervisor setup. Initial installation offers the existing repository token or a license. The owner token is saved root-only after a verified download; license activation remains cached until it expires or is rejected. The installed ultrafull command opens local files without fetching GitHub. Updates and first-time missing package downloads need network access.
+
+گزینهٔ چهارم اسپوف از TUN/IPX/TCP استفاده می‌کند. ابتدا ورود با توکن اصلی یا لایسنس انتخاب می‌شود. توکن پس از دریافت تأییدشده، خصوصی برای روت ذخیره می‌شود. بازکردن پنل نصب‌شده به گیت‌هاب وابسته نیست؛ تمدید لایسنس و دریافت آپدیت مسیر جدا دارند.
 
 ## English
 
