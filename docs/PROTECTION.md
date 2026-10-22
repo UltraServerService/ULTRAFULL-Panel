@@ -1,7 +1,7 @@
-# Protected runtime and updates — 0.2.2
+# Protected runtime and updates — 0.2.5
 
 ULTRAFULL uses AES-256-GCM authenticated envelopes around the registered Ultra
-executables. Each new build uses independent random keys for each executable.
+executables. Each newly built protected core generation uses independent random keys for each executable. Unchanged core packages may be reused by a later panel release; the Spoof panel update reuses the validated Ultra core package from 0.2.4.
 Decryption material is no longer passed through Go linker flags, which are
 recorded in executable build information. Splitting generated key material is
 obfuscation, not a cryptographic boundary against a server administrator.

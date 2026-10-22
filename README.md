@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/ultrafull-banner.svg" alt="ULTRAFULL — Ultra, Paqet and Backhaul" width="100%">
+  <img src="assets/ultrafull-banner.svg" alt="ULTRAFULL — Ultra, Paqet, Backhaul and Spoof" width="100%">
 </p>
 
 <p align="center">
-  <strong>Version 0.2.4</strong> · Linux amd64 · systemd
+  <strong>Version 0.2.5</strong> · Linux amd64 · systemd
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 
 ## English
 
-ULTRAFULL brings **Ultra, Paqet and Backhaul** into one terminal panel. Install tunnels, manage customer ports, select routes and check connection status from the same interface.
+ULTRAFULL brings **Ultra, Paqet, Backhaul and Spoof** into one terminal panel. Install tunnels, manage customer ports, select routes and check connection status from the same interface.
 
 Coordinated TCP / ICMP engine selection is available for UltraMax. IP changes preserve the selected engine.
 
@@ -21,6 +21,7 @@ Coordinated TCP / ICMP engine selection is available for UltraMax. IP changes pr
 | --- | --- |
 | **Ultra** | ICMP, UDP-hop, HTTPS, XHTTP and UltraMax transport choices |
 | **Paqet & Backhaul** | Additional tunnel options managed from the same panel |
+| **Spoof** | Separate TUN/IPX/TCP family with scoped firewall and verified two-way source identities |
 | **ultrasource** | Registers named server pairs and their control bots |
 | **tunnelcheck** | Checks tunnels and applies carrier IP changes |
 | **configuptime** | Monitors a real customer config and reports outages |
@@ -45,7 +46,7 @@ curl -fL --proto '=https' --tlsv1.2 \
 sudo bash install-commercial.sh
 ```
 
-The installer opens the ULTRAFULL panel. Choose **1 - Iran** or **2 - Foreign**. Iran activation asks only for the license and verifies its assigned server IP. A license covers **one Iran IPv4**, with **no limit on foreign servers** connected to that entitlement. You can install the foreign side first.
+First choose **GitHub token / owner** or **License**. Your existing repository token is entered once and saved root-only after verification. License mode keeps the existing Iran / Foreign activation flow and reuses saved activation. Iran activation asks only for the license and verifies its assigned server IP. A license covers **one Iran IPv4**, with **no limit on foreign servers** connected to that entitlement. You can install the foreign side first.
 
 After installation, open the panel with `sudo ultrafull`. Start with **Install bots** on Iran, then follow the [installation guide](docs/README.md#english) for proxy setup, SSH registration and adding a server pair.
 
@@ -53,7 +54,7 @@ After installation, open the panel with `sudo ultrafull`. Start with **Install b
 
 ## فارسی
 
-ULTRAFULL پنلی برای مدیریت **Ultra، Paqet و Backhaul** است. نصب تونل‌ها، تنظیم پورت‌ها، انتخاب مسیر و بررسی وضعیت اتصال از طریق این پنل انجام می‌شود.
+ULTRAFULL پنلی برای مدیریت **Ultra، Paqet، Backhaul و Spoof** است. نصب تونل‌ها، تنظیم پورت‌ها، انتخاب مسیر و بررسی وضعیت اتصال از طریق این پنل انجام می‌شود.
 
 این مجموعه شامل سه ربات تلگرام است:
 
@@ -83,6 +84,14 @@ ULTRAFULL پنلی برای مدیریت **Ultra، Paqet و Backhaul** است. �
 | Component licenses and notices | [Third-party notices](docs/THIRD_PARTY.md) |
 
 The commercial installer is separate from the classic edition. Component licenses, including those for open-source software and Backhaul Premium, still apply.
+
+
+
+
+
+Opening an installed panel with `sudo ultrafull` uses local files; it does not fetch GitHub. Explicit updates and missing-package downloads need network access. License validation uses its cached signed lease and retains its existing expiry and renewal rules.
+
+For Spoof installation, Iran asks whether the VPS is on your own hypervisor. Owned VMs use a one-time pinned SSH registration and a key restricted to that VM; rented VPSs skip the host. Provider source filtering cannot be opened from inside the guest.
 
 This repository contains the public documentation, panel preview and installation bootstrap. Runtime packages are supplied by the license service after validation.
 

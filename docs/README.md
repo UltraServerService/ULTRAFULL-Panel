@@ -1,12 +1,12 @@
 # ULTRAFULL Commercial
 
-Version 0.2.4 improves parallel TCP transfer handling and keeps transport settings synchronized during IP and mode changes. Updating the panel stages these changes without restarting an active tunnel; coordinated route changes apply them to both servers. Encryption and configured traffic limits are preserved.
+Version 0.2.5 adds Spoof as a fourth independent family (TUN / IPX / TCP), scoped guest firewall and optional per-VM hypervisor setup. Initial installation offers the existing repository token or a license. The owner token is saved root-only after a verified download; license activation remains cached until it expires or is rejected. The installed ultrafull command opens local files without fetching GitHub. Updates and first-time missing package downloads need network access.
 
-نسخهٔ 0.2.4 انتقال‌های هم‌زمان TCP و هماهنگی تنظیمات هنگام تغییر IP یا حالت اتصال را بهبود می‌دهد. آپدیت پنل به‌تنهایی تونل فعال را ری‌استارت نمی‌کند؛ تغییر هماهنگ مسیر، تنظیمات را روی هر دو سرور اعمال می‌کند. رمزنگاری و محدودیت‌های تنظیم‌شدهٔ ترافیک حفظ می‌شوند.
+نسخهٔ 0.2.5 گزینهٔ چهارم اسپوف را با TUN/IPX/TCP اضافه می‌کند. ابتدا ورود با توکن اصلی یا لایسنس انتخاب می‌شود. توکن پس از دریافت تأییدشده، خصوصی برای روت ذخیره می‌شود. بازکردن پنل نصب‌شده به گیت‌هاب وابسته نیست؛ تمدید لایسنس و دریافت آپدیت مسیر جدا دارند.
 
 ## English
 
-ULTRAFULL manages Ultra, Paqet and Backhaul from one terminal panel. Ultra offers
+ULTRAFULL manages Ultra, Paqet, Backhaul and Spoof from one terminal panel. Ultra offers
 ICMP, UDP-hop, HTTPS, XHTTP and UltraMax transport choices. This guide covers
 installation and administration; it intentionally omits transport internals.
 
@@ -19,7 +19,7 @@ curl -fL --proto '=https' --tlsv1.2 https://ultraradar.ultranec.pro:9448/install
 sudo bash install-commercial.sh
 ```
 
-The installer asks for the server role. Outbound HTTPS to the authority on port
+Choose **GitHub token / owner** or **License** on first installation. Token access uses the existing private repository; it does not require a license. In license mode the installer asks for the server role. Outbound HTTPS to the authority on port
 9448 is required. The same command installs Iran and Foreign.
 
 The installer opens the ULTRAFULL panel. Choose **1 — Iran server** or
@@ -174,3 +174,9 @@ ULTRAFULL برای نصب و مدیریت Ultra، Paqet و Backhaul طراحی �
 
 </div>
 
+
+## Spoof setup
+
+Install Spoof on Iran first. Choose whether the Iran VM is on your own hypervisor. If yes, enter its VM ID and complete pinned administrative SSH setup once; later requests use a forced-command key restricted to that VM and MAC. If rented, no hypervisor is contacted. Enter the real peer IP, two tested public spoof identities and customer ports; the private pairing bundle supplies the matching foreign configuration. Select Spoof / Foreign and paste that bundle on the peer. Register both nodes with the existing Telegram source bot for route, health and restart controls.
+
+Only scoped rules owned by this feature are managed. Service-active alone is not a successful spoof test: health requires a source-bound TUN exchange and both expected outer source identities. Provider filtering cannot be removed from inside a rented VPS, and current success does not guarantee connectivity during a future shutdown. Keep the pairing bundle private: it contains the shared encryption key.
