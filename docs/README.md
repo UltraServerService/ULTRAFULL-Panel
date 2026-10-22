@@ -1,8 +1,8 @@
 # ULTRAFULL Commercial
 
-Version 0.2.5 adds Spoof as a fourth independent family (TUN / IPX / TCP), scoped guest firewall and optional per-VM hypervisor setup. Initial installation offers the existing repository token or a license. The owner token is saved root-only after a verified download; license activation remains cached until it expires or is rejected. The installed ultrafull command opens local files without fetching GitHub. Updates and first-time missing package downloads need network access.
+Version 0.2.6 adds Spoof as a fourth independent family (TUN / IPX / TCP), scoped guest firewall and optional per-VM hypervisor setup. Initial installation offers the existing repository token or a license. The owner token is saved root-only after a verified download; license activation remains cached until it expires or is rejected. The installed ultrafull command opens local files without fetching GitHub. Updates and first-time missing package downloads need network access.
 
-نسخهٔ 0.2.5 گزینهٔ چهارم اسپوف را با TUN/IPX/TCP اضافه می‌کند. ابتدا ورود با توکن اصلی یا لایسنس انتخاب می‌شود. توکن پس از دریافت تأییدشده، خصوصی برای روت ذخیره می‌شود. بازکردن پنل نصب‌شده به گیت‌هاب وابسته نیست؛ تمدید لایسنس و دریافت آپدیت مسیر جدا دارند.
+نسخهٔ 0.2.6 گزینهٔ چهارم اسپوف را با TUN/IPX/TCP اضافه می‌کند. ابتدا ورود با توکن اصلی یا لایسنس انتخاب می‌شود. توکن پس از دریافت تأییدشده، خصوصی برای روت ذخیره می‌شود. بازکردن پنل نصب‌شده به گیت‌هاب وابسته نیست؛ تمدید لایسنس و دریافت آپدیت مسیر جدا دارند.
 
 ## English
 
@@ -180,3 +180,9 @@ ULTRAFULL برای نصب و مدیریت Ultra، Paqet و Backhaul طراحی �
 Install Spoof on Iran first. Choose whether the Iran VM is on your own hypervisor. If yes, enter its VM ID and complete pinned administrative SSH setup once; later requests use a forced-command key restricted to that VM and MAC. If rented, no hypervisor is contacted. Enter the real peer IP, two tested public spoof identities and customer ports; the private pairing bundle supplies the matching foreign configuration. Select Spoof / Foreign and paste that bundle on the peer. Register both nodes with the existing Telegram source bot for route, health and restart controls.
 
 Only scoped rules owned by this feature are managed. Service-active alone is not a successful spoof test: health requires a source-bound TUN exchange and both expected outer source identities. Provider filtering cannot be removed from inside a rented VPS, and current success does not guarantee connectivity during a future shutdown. Keep the pairing bundle private: it contains the shared encryption key.
+
+## Owned VM registration through a main server (0.2.6)
+
+Select **Main server / automatic VM registration** for an owned Iran VM. Leave the VM ID as `auto` and paste the reusable private `UFSMMAIN1` connection profile from your main administrator. The VM creates its own private key and requests enrollment over fingerprint-pinned TLS. The main server accepts only requests whose TCP source IPv4 matches the requested local IP, resolves that IP in the mother Virtualizor inventory and checks the VM MAC. It authorizes a source-IP/VM/MAC-restricted SSH key, then relays only narrow firewall RPC operations. The private registration profile authorizes enrollment and must not be published or shared with customers. No administrative mother key is installed on the VM. Rented VPSs skip this workflow.
+
+The main administrator configures the relay once with `sudo python3 /opt/ultrafull/app/spoof_main_setup.py`; verified mother SSH access must already exist on that main server. `sudo ultrafull-spoof-enroll` prints its reusable private connection profile. The default enrollment endpoint uses TCP55125; runtime relay uses the main server SSH port. These management paths must be reachable inside Iran. Registration fails closed if the inventory, identity, key or TLS fingerprint cannot be verified. Existing direct VM-scoped mother registrations remain supported.

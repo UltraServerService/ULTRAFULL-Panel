@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 0.2.5</strong> · Linux amd64 · systemd
+  <strong>Version 0.2.6</strong> · Linux amd64 · systemd
 </p>
 
 <p align="center">
