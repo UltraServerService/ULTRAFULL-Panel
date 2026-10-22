@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 0.2.7</strong> · Linux amd64 · systemd
+  <strong>Version 0.2.8</strong> · Linux amd64 · systemd
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ULTRAFULL brings **Ultra, Paqet, Backhaul and Spoof** into one terminal panel. Install tunnels, manage customer ports, select routes and check connection status from the same interface.
 
-Version 0.2.7 fixes raw TCP carrier checksums for Spoof while preserving both spoofed sources, encryption and TUN/IPX/TCP. The owned correction survives service restarts; unrelated traffic is unchanged.
+Version 0.2.8 increases the bounded Spoof TUN queue from 64 to 1024 packets, correcting a reproduced local queue-drop condition. Existing owned old defaults are backed up and staged for the next Spoof restart; custom tuning is preserved. Both spoofed sources, encryption, TUN/IPX/TCP and the scoped checksum correction remain unchanged. Upstream network loss remains a separate limitation.
 
 Coordinated TCP / ICMP engine selection is available for UltraMax. IP changes preserve the selected engine.
 
@@ -98,3 +98,5 @@ For Spoof installation, Iran asks whether the VPS is on your own hypervisor. Own
 This repository contains the public documentation, panel preview and installation bootstrap. Runtime packages are supplied by the license service after validation.
 
 [Protected runtime and update compatibility](docs/PROTECTION.md)
+
+Release 0.2.8: the bounded Spoof TUN queue is 1024 packets. Updating an owned old-default configuration preserves its original backup and applies the queue at the next Spoof restart, without restarting live tunnels or changing identities. Intermittent upstream loss is a separate limitation.

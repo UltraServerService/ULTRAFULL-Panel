@@ -1,5 +1,9 @@
 # ULTRAFULL Commercial
 
+Version 0.2.8 raises the bounded Spoof TUN queue from 64 to 1024 packets. Only the exact old default of an owned TCP Spoof installation is migrated, with an original-config backup. Custom settings and source identities are preserved. Updating stages this setting for the next Spoof restart; it does not restart an active tunnel. Existing upstream packet loss can still affect reliability.
+
+نسخهٔ ۰٫۲٫۸ صف محدود اسپوف را از ۶۴ به ۱۰۲۴ بسته افزایش می‌دهد. فقط پیش‌فرض قدیمیِ تونل ثبت‌شده با پشتیبان ارتقا می‌یابد؛ تنظیمات سفارشی و آدرس‌های اسپوف حفظ می‌شوند. برای تونل فعال، صف جدید از ری‌استارت بعدی اسپوف اثر می‌کند و آپدیت خودکار آن را قطع نمی‌کند. این اصلاح تضمین حذف افت بستهٔ بالادست نیست.
+
 Version 0.2.7 corrects invalid raw TCP carrier checksums using an owned, exact-flow egress action. Spoof identities, real endpoints, encryption and TUN/IPX/TCP remain unchanged. The correction is restored when the Spoof service starts and is removed with that tunnel, preserving unrelated traffic and queue settings. Updating applies it to an already running Spoof service without restarting the tunnel. New Spoof configurations use a 5-second heartbeat and a 60-second timeout.
 
 نسخهٔ ۰٫۲٫۷ چک‌سام حامل TCP اسپوف را فقط برای جریان همان تونل اصلاح می‌کند؛ مبدأهای اسپوف، مقصدها، رمزنگاری و ساختار TUN/IPX/TCP تغییر نمی‌کنند. اصلاح در استارت بعدی هم برقرار می‌شود و همراه حذف تونل پاک می‌شود. آپدیت، اصلاح چک‌سام را بدون ری‌استارت تونل فعال اعمال می‌کند.

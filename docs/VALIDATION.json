@@ -1,10 +1,10 @@
 {
-  "version": "0.2.7",
+  "version": "0.2.8",
   "tested_at": "2026-10-22",
   "linux_unit_groups": [
     {
       "group": "classic",
-      "tests": 347,
+      "tests": 353,
       "ok": true,
       "skipped": 0
     },
@@ -15,7 +15,7 @@
       "skipped": 0
     }
   ],
-  "linux_unit_tests_executed": 394,
+  "linux_unit_tests_executed": 400,
   "generic_vendor_retired_fixture_skips": 18,
   "central_deployment_compatibility": {
     "tests": 267,
@@ -30,7 +30,9 @@
     "token_and_license_selection_pty": true,
     "hidden_token_entry": true,
     "invalid_license_retry": true,
-    "stored_credentials_no_reprompt_unit_tests": true
+    "stored_credentials_no_reprompt_unit_tests": true,
+    "owned_old_queue_migrated_with_original_backup": true,
+    "queue_migration_preserves_all_other_fields": true
   },
   "live_spoof_transport": {
     "backhaul": "TUN / IPX / TCP",
@@ -39,20 +41,32 @@
     "customer_https_any_success": true,
     "customer_https_attempts": 5,
     "customer_https_successes": 4,
-    "customer_https_timeouts": 1,
+    "customer_https_tls_errors": 1,
     "customer_exit_ip_verified": true,
-    "capture_seconds": 128,
+    "capture_seconds": 70,
     "capture_kernel_drops": 0,
     "heartbeat_timeout_mentions_in_window": 0,
     "service_pids_unchanged_in_window": true,
-    "intermittent_return_packet_loss_observed": true,
-    "current_identities_encryption_and_customer_ports_preserved": true,
-    "physical_tcp_checksum_after_correction": {
-      "sample_packets": 4,
-      "valid": 4,
-      "zero": 0
+    "outer_matches": {
+      "iran_to_foreign": [
+        118,
+        118
+      ],
+      "foreign_to_iran": [
+        108,
+        108
+      ]
     },
-    "limits": "A successful bounded window does not establish continuous stability; later short download probes were unsuccessful. No throughput result or future outage availability guarantee."
+    "tun_ping_replies": [
+      12,
+      12
+    ],
+    "tun_ping_loss_percent": [
+      0,
+      0
+    ],
+    "current_identities_encryption_and_customer_ports_preserved": true,
+    "upstream_loss_seen_in_other_windows": true
   },
   "hypervisor_scope": {
     "vm_and_mac_pinned": true,
@@ -76,12 +90,13 @@
     "separate_spoof_core_sha256": "6eec5c5624bdafd47ee4f92a0b2e4c6e89719a2cc471d48c97f47d47997c081f"
   },
   "limits": [
-    "Isolated installer checks use a systemd control harness; live Spoof services were separately tested under real systemd.",
-    "The checksum correction repairs packet validity; it does not remove upstream packet loss or prove the cause of transient speed changes.",
-    "No new throughput or future blackout availability claim.",
-    "License expiry and background renewal semantics are unchanged.",
-    "Spoof identities must be proven separately per direction; rented ownership is not evidence of upstream source acceptance.",
-    "A reusable private main-registration profile is required once per new owned VM; this is separate from the Iran/foreign tunnel pairing bundle. The main relay supports the verified Virtualizor IP inventory schema; unknown or mismatched inventory fails closed."
+    "The queue change repairs a reproduced local drop condition; upstream loss was independently observed and is not guaranteed to be removed.",
+    "One of five final customer HTTPS checks failed TLS despite matching outer packets; the cause of that individual failure is not established.",
+    "The user reported current stability after the queue correction; this and the 70-second capture do not prove indefinite reliability.",
+    "Isolated install uses a systemd harness and the declared system TOML dependency in a private mount; live Spoof services were separately tested under real systemd.",
+    "Updating stages the exact owned old default with a backup. The new queue takes effect at the next Spoof restart; other settings and running services are preserved.",
+    "No guarantee of future blackout availability, and no sustained speed benchmark.",
+    "License expiry and renewal semantics remain unchanged."
   ],
   "unchanged_manager_evidence_reused_from": "0.2.5: generic 249 executed passed, 18 retired fixtures skipped; actual central 267 passed",
   "main_registration": {
@@ -103,7 +118,8 @@
     "addresses_and_payload_preserved": true,
     "unrelated_sources_and_ports_unchanged": true,
     "owned_filter_and_clsact_removed": true,
-    "production_interfaces_used": false
+    "production_interfaces_used": false,
+    "evidence_reused_from": "0.2.7: unchanged checksum correction; kernel test was not rerun for queue-only change"
   },
   "checksum_fix": {
     "exact_owned_egress_tcp_flow_only": true,
@@ -115,5 +131,31 @@
       5,
       60
     ]
+  },
+  "queue_fix": {
+    "old_channel_size": 64,
+    "new_channel_size": 1024,
+    "private_transfer_bytes_each_direction": 1048576,
+    "payload_hashes_verified_both_directions": true,
+    "foreign_queue_drop_messages_before": 91,
+    "foreign_queue_drop_messages_after": 0,
+    "only_queue_field_changed_live": true,
+    "unrelated_customer_processes_preserved": true,
+    "runtime_source_module_updated_without_further_restart": true,
+    "existing_customer_profile_preserved": true,
+    "user_reported_current_stability": true,
+    "exact_owned_old_default_only_on_update": true,
+    "custom_tuning_preserved": true,
+    "update_stages_for_next_spoof_restart": true,
+    "updater_restarts_active_tunnel": false
+  },
+  "independent_foreign_controls": {
+    "native_https_successes": 5,
+    "local_shadowsocks_https_successes": 5,
+    "attempts_each": 5,
+    "small_native_download_bytes": 2097152,
+    "small_native_download_mbps": 75.7,
+    "sustained_throughput_benchmark": false,
+    "temp_clients_and_icmp_trial_interfaces_removed": true
   }
 }
